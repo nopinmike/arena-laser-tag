@@ -1,21 +1,21 @@
-import Header from './components/Header/Header'
-import Hero from './components/Hero/Hero'
-import Advantages from './components/Advantages/Advantages'
-import Training from './components/Training/Training'
-import Contacts from './components/Contacts/Contacts'
-import Footer from './components/Footer/Footer'
+import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout/Layout'
+import ScrollToTop from './components/ScrollToTop'
+import HomePage from './pages/HomePage/HomePage'
+import AboutPage from './pages/AboutPage/AboutPage'
+import ContactsPage from './pages/ContactsPage/ContactsPage'
 
 export default function App() {
   return (
     <>
-      <Header />
-      <main>
-        <Hero />
-        <Advantages />
-        <Training />
-        <Contacts />
-      </main>
-      <Footer />
+      <ScrollToTop />
+      <Routes>
+        <Route element={<Layout />}>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contacts" element={<ContactsPage />} />
+        </Route>
+      </Routes>
     </>
   )
 }

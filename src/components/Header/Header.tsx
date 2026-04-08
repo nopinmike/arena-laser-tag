@@ -1,15 +1,17 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './Header.module.scss'
 
 const NAV_ITEMS = [
-  { label: 'О клубе', href: '#advantages' },
-  { label: 'Тренировки', href: '#training' },
-  { label: 'Контакты', href: '#contacts' },
+  { label: 'Главная', to: '/' },
+  { label: 'О клубе', to: '/about' },
+  { label: 'Контакты', to: '/contacts' },
 ]
 
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileOpen, setIsMobileOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const onScroll = () => setIsScrolled(window.scrollY > 40)
@@ -22,12 +24,9 @@ export default function Header() {
     return () => { document.body.style.overflow = '' }
   }, [isMobileOpen])
 
-  const handleNavClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    e.preventDefault()
+  useEffect(() => {
     setIsMobileOpen(false)
-    const el = document.querySelector(href)
-    el?.scrollIntoView({ behavior: 'smooth' })
-  }, [])
+  }, [location.pathname])
 
   const headerClass = [
     styles.header,
@@ -37,41 +36,29 @@ export default function Header() {
   return (
     <header className={headerClass}>
       <div className={styles.container}>
-        <a href="#" className={styles.logo} onClick={(e) => {
-          e.preventDefault()
-          window.scrollTo({ top: 0, behavior: 'smooth' })
-        }}>
+        <Link to="/" className={styles.logo}>
           <span className={styles.logoMain}>АРЕНА</span>
           <span className={styles.logoSub}>Спортивный клуб лазертага</span>
-        </a>
+        </Link>
 
         <nav className={`${styles.nav} ${isMobileOpen ? styles.navOpen : ''}`}>
           {NAV_ITEMS.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className={styles.navLink}
-              onClick={(e) => handleNavClick(e, item.href)}
+            <Link
+              key={item.to}
+              to={item.to}
+              className={`${styles.navLink} ${location.pathname === item.to ? styles.navLinkActive : ''}`}
             >
               {item.label}
-            </a>
+            </Link>
           ))}
-          <a
-            href="#contacts"
-            className={styles.ctaBtn}
-            onClick={(e) => handleNavClick(e, '#contacts')}
-          >
+          <Link to="/contacts" className={styles.ctaBtn}>
             Вступить в клуб
-          </a>
+          </Link>
         </nav>
 
-        <a
-          href="#contacts"
-          className={styles.ctaBtnDesktop}
-          onClick={(e) => handleNavClick(e, '#contacts')}
-        >
+        <Link to="/contacts" className={styles.ctaBtnDesktop}>
           Вступить в клуб
-        </a>
+        </Link>
 
         <button
           className={`${styles.burger} ${isMobileOpen ? styles.burgerOpen : ''}`}

@@ -44,7 +44,7 @@
   }
 
   @media (min-width: $bp-desktop) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
 }
@@ -95,4 +95,21 @@
   font-size: 14px;
   color: $text-muted;
   line-height: 1.65;
+}
+
+.moreWrap {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.moreLink {
+  font-size: 16px;
+  font-weight: 700;
+  color: $accent-orange;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $accent-orange-hover;
+  }
 }

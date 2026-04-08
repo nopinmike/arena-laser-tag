@@ -58,7 +58,6 @@
   }
 }
 
-// Desktop nav
 .nav {
   display: none;
   align-items: center;
@@ -77,6 +76,7 @@
   letter-spacing: 1px;
   transition: color $transition-base;
   position: relative;
+  text-decoration: none;
 
   &::after {
     content: '';
@@ -96,6 +96,14 @@
       width: 100%;
     }
   }
+
+  &.navLinkActive {
+    color: $white;
+
+    &::after {
+      width: 100%;
+    }
+  }
 }
 
 .ctaBtn {
@@ -108,6 +116,7 @@
   border-radius: $radius-sm;
   text-transform: uppercase;
   letter-spacing: 1px;
+  text-decoration: none;
   transition: background-color $transition-base, box-shadow $transition-base, transform $transition-base;
 
   &:hover {
@@ -123,6 +132,7 @@
 
 .ctaBtnDesktop {
   display: none;
+  text-decoration: none;
 
   @media (min-width: $bp-desktop) {
     display: inline-block;
@@ -144,7 +154,6 @@
   }
 }
 
-// Mobile menu
 .burger {
   display: flex;
   flex-direction: column;
@@ -182,7 +191,6 @@
   }
 }
 
-// Mobile nav overlay
 .nav.navOpen {
   display: flex;
   flex-direction: column;

@@ -1,18 +1,12 @@
+import training1 from '../../assets/training-1.png'
+import training2 from '../../assets/training-2.png'
+import training3 from '../../assets/training-3.png'
 import styles from './Training.module.scss'
 
 const IMAGES = [
-  {
-    src: 'https://images.unsplash.com/photo-1529070538774-1843cb3265df?w=800&q=80',
-    alt: 'Тактическая тренировка',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1504025468847-0e438279542c?w=800&q=80',
-    alt: 'Командная работа',
-  },
-  {
-    src: 'https://images.unsplash.com/photo-1577223625816-7546f13df25d?w=800&q=80',
-    alt: 'Стрелковая подготовка',
-  },
+  { src: training1, alt: 'Тактическая тренировка' },
+  { src: training2, alt: 'Командная работа' },
+  { src: training3, alt: 'Юные спортсмены' },
 ]
 
 export default function Training() {
@@ -25,13 +19,13 @@ export default function Training() {
           </h2>
           <p className={styles.description}>
             В «АРЕНЕ» мы не просто играем — мы тренируемся. Дети осваивают
-            перемещение, стойку, тактическое мышление. Игровая форма делает
-            занятия увлекательными и эффективными.
+            технику стрельбы, перемещение, стойку, тактическое мышление.
+            Игровая форма делает занятия увлекательными и эффективными.
           </p>
           <p className={styles.description}>
-            Каждая тренировка включает разминку, отработку навыков и командные
-            сценарии. Ребёнок учится принимать решения, работать в&nbsp;команде
-            и&nbsp;доводить дело до победы.
+            Каждая тренировка включает техническую подготовку, разбор игровых
+            стратегий и&nbsp;упражнения на&nbsp;выносливость, скорость
+            и&nbsp;координацию. Тренировки проходят 3&nbsp;раза в&nbsp;неделю.
           </p>
         </div>
         <div className={styles.gallery}>
