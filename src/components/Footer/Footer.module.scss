@@ -1,0 +1,35 @@
+@use '../../styles/variables' as *;
+
+.footer {
+  background: $primary-dark;
+  padding: 24px 0;
+}
+
+.container {
+  @include container;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+
+  @media (min-width: $bp-tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.copy {
+  font-size: 13px;
+  color: $text-muted;
+  text-align: center;
+}
+
+.policy {
+  font-size: 13px;
+  color: $text-muted;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $white;
+  }
+}

@@ -1,0 +1,68 @@
+// Color palette
+$primary-dark: #0A192F;
+$primary-blue: #112240;
+$accent-orange: #FF4C29;
+$accent-orange-hover: #E63E1C;
+$accent-light: #FF6B4A;
+$white: #FFFFFF;
+$off-white: #F0F4F8;
+$text-light: #CCD6F6;
+$text-muted: #8892B0;
+$overlay-dark: rgba(10, 25, 47, 0.75);
+
+// Typography
+$font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+// Breakpoints
+$bp-mobile: 480px;
+$bp-tablet: 768px;
+$bp-desktop: 1024px;
+$bp-wide: 1440px;
+
+// Spacing
+$container-padding: 20px;
+$section-padding-mobile: 60px 0;
+$section-padding-desktop: 100px 0;
+
+// Transitions
+$transition-fast: 0.2s ease;
+$transition-base: 0.3s ease;
+$transition-slow: 0.5s ease;
+
+// Border radius
+$radius-sm: 8px;
+$radius-md: 12px;
+$radius-lg: 16px;
+
+// Shadows
+$shadow-card: 0 4px 24px rgba(0, 0, 0, 0.08);
+$shadow-card-hover: 0 8px 40px rgba(0, 0, 0, 0.15);
+$shadow-button: 0 4px 16px rgba(255, 76, 41, 0.35);
+
+// Mixins
+@mixin container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+
+  @media (min-width: $bp-tablet) {
+    padding: 0 32px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    padding: 0 40px;
+  }
+}
+
+@mixin section-padding {
+  padding: $section-padding-mobile;
+
+  @media (min-width: $bp-tablet) {
+    padding: 80px 0;
+  }
+
+  @media (min-width: $bp-desktop) {
+    padding: $section-padding-desktop;
+  }
+}

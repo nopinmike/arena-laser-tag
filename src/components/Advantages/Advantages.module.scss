@@ -1,0 +1,98 @@
+@use '../../styles/variables' as *;
+
+.section {
+  @include section-padding;
+  background: $off-white;
+}
+
+.container {
+  @include container;
+}
+
+.heading {
+  text-align: center;
+  font-size: clamp(26px, 4vw, 42px);
+  color: $primary-dark;
+  margin-bottom: 12px;
+}
+
+.accent {
+  color: $accent-orange;
+}
+
+.lead {
+  text-align: center;
+  font-size: clamp(15px, 2vw, 18px);
+  color: $text-muted;
+  max-width: 520px;
+  margin: 0 auto 48px;
+  line-height: 1.6;
+
+  @media (min-width: $bp-tablet) {
+    margin-bottom: 60px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+
+  @media (min-width: $bp-tablet) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @media (min-width: $bp-desktop) {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+.card {
+  background: $white;
+  border-radius: $radius-md;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: $shadow-card;
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: $shadow-card-hover;
+  }
+
+  @media (min-width: $bp-desktop) {
+    padding: 40px 24px;
+  }
+}
+
+.iconWrap {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, $accent-orange, $accent-light);
+  border-radius: 50%;
+  font-size: 26px;
+  color: $white;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 700;
+  color: $primary-dark;
+  margin-bottom: 10px;
+
+  @media (min-width: $bp-desktop) {
+    font-size: 17px;
+  }
+}
+
+.cardText {
+  font-size: 14px;
+  color: $text-muted;
+  line-height: 1.65;
+}
