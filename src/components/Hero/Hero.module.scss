@@ -1,4 +1,4 @@
-@use '../../styles/variables' as *;
+@use "../../styles/variables" as *;
 
 .hero {
   position: relative;
@@ -33,7 +33,7 @@
       180deg,
       rgba(10, 25, 47, 0.8) 0%,
       rgba(10, 25, 47, 0.35) 40%,
-      rgb(0 16 75 / 85%) 100%
+      rgb(0 0 0 / 85%) 100%
     );
   z-index: 1;
 }
@@ -123,7 +123,10 @@
   letter-spacing: 2px;
   border-radius: $radius-sm;
   text-decoration: none;
-  transition: background-color $transition-base, box-shadow $transition-base, transform $transition-base;
+  transition:
+    background-color $transition-base,
+    box-shadow $transition-base,
+    transform $transition-base;
 
   &:hover {
     background: $accent-orange-hover;
@@ -151,7 +154,10 @@
   border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: $radius-sm;
   text-decoration: none;
-  transition: border-color $transition-base, background-color $transition-base, transform $transition-base;
+  transition:
+    border-color $transition-base,
+    background-color $transition-base,
+    transform $transition-base;
 
   &:hover {
     border-color: $white;
