@@ -26,14 +26,14 @@
   background:
     radial-gradient(
       ellipse 60% 50% at 50% 45%,
-      rgba(10, 25, 47, 0.82) 0%,
+      rgba(0, 0, 0, 0.82) 0%,
       rgba(10, 25, 47, 0.45) 100%
     ),
     linear-gradient(
       180deg,
       rgba(10, 25, 47, 0.8) 0%,
       rgba(10, 25, 47, 0.35) 40%,
-      rgba(10, 25, 47, 0.85) 100%
+      rgb(0 16 75 / 85%) 100%
     );
   z-index: 1;
 }
