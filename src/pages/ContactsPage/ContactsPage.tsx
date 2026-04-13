@@ -1,4 +1,5 @@
-import { FaPhone, FaVk, FaTelegramPlane, FaMapMarkerAlt, FaUserTie, FaClock } from 'react-icons/fa'
+import { FaPhone, FaVk, FaTelegramPlane, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
+import coachPhoto from '../../assets/coach.png'
 import styles from './ContactsPage.module.scss'
 
 const CONTACT_CARDS = [
@@ -64,8 +65,12 @@ export default function ContactsPage() {
 
           {/* Coach */}
           <div className={styles.coachBlock}>
-            <div className={styles.coachIcon}>
-              <FaUserTie />
+            <div className={styles.coachPhotoWrap}>
+              <img
+                src={coachPhoto}
+                alt="Портрет главного тренера спортивного клуба «АРЕНА»"
+                className={styles.coachPhoto}
+              />
             </div>
             <div className={styles.coachInfo}>
               <h3 className={styles.coachTitle}>Тренер</h3>

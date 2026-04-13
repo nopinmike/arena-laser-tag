@@ -13,8 +13,8 @@ import {
   FaHeartbeat,
   FaHandshake,
   FaStar,
-  FaUserTie,
 } from 'react-icons/fa'
+import coachPhoto from '../../assets/coach.png'
 import styles from './AboutPage.module.scss'
 
 const DEVELOPS = [
@@ -196,7 +196,11 @@ export default function AboutPage() {
           </h2>
           <div className={styles.coach}>
             <div className={styles.coachAvatar}>
-              <FaUserTie />
+              <img
+                src={coachPhoto}
+                alt="Портрет главного тренера спортивного клуба «АРЕНА»"
+                className={styles.coachPhoto}
+              />
             </div>
             <div className={styles.coachInfo}>
               <h3 className={styles.coachName}>Нопин Максим Владимирович</h3>
