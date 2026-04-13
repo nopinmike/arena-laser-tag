@@ -1,30 +1,36 @@
-import { FaPhone, FaVk, FaTelegramPlane, FaMapMarkerAlt, FaClock } from 'react-icons/fa'
-import coachPhoto from '../../assets/coach.png'
-import styles from './ContactsPage.module.scss'
+import {
+  FaPhone,
+  FaVk,
+  FaTelegramPlane,
+  FaMapMarkerAlt,
+  FaClock,
+} from "react-icons/fa";
+import coachPhoto from "../../assets/coach.png";
+import styles from "./ContactsPage.module.scss";
 
 const CONTACT_CARDS = [
   {
     icon: <FaPhone />,
-    label: 'Телефон',
-    value: '+7 (911) 571-55-22',
-    href: 'tel:+79115715522',
-    linkText: 'Позвонить',
+    label: "Телефон",
+    value: "+7 (911) 571-55-22",
+    href: "tel:+79115715522",
+    linkText: "Позвонить",
   },
   {
     icon: <FaVk />,
-    label: 'Группа ВКонтакте',
-    value: 'arena_velsk',
-    href: 'https://vk.com/arena_velsk',
-    linkText: 'Перейти в группу',
+    label: "Группа ВКонтакте",
+    value: "arena_velsk",
+    href: "https://vk.com/arena_velsk",
+    linkText: "Перейти в группу",
   },
   {
     icon: <FaMapMarkerAlt />,
-    label: 'Адрес',
-    value: 'г. Вельск, Архангельская область',
+    label: "Адрес",
+    value: "г. Вельск, Архангельская область",
     href: undefined,
     linkText: undefined,
   },
-]
+];
 
 export default function ContactsPage() {
   return (
@@ -53,8 +59,12 @@ export default function ContactsPage() {
                   <a
                     href={card.href}
                     className={styles.cardLink}
-                    target={card.href.startsWith('http') ? '_blank' : undefined}
-                    rel={card.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    target={card.href.startsWith("http") ? "_blank" : undefined}
+                    rel={
+                      card.href.startsWith("http")
+                        ? "noopener noreferrer"
+                        : undefined
+                    }
                   >
                     {card.linkText}
                   </a>
@@ -119,7 +129,7 @@ export default function ContactsPage() {
               <FaVk className={styles.btnIcon} />
               ВКонтакте
             </a>
-            <a
+            {/* <a
               href="#"
               className={styles.tgBtn}
               target="_blank"
@@ -127,7 +137,7 @@ export default function ContactsPage() {
             >
               <FaTelegramPlane className={styles.btnIcon} />
               Телеграм
-            </a>
+            </a> */}
           </div>
           <a href="tel:+79115715522" className={styles.phoneLink}>
             <FaPhone /> +7 (911) 571-55-22
@@ -135,5 +145,5 @@ export default function ContactsPage() {
         </div>
       </section>
     </div>
-  )
+  );
 }

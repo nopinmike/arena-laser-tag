@@ -1,9 +1,26 @@
-import { Link } from 'react-router-dom'
-import { FaVk, FaPhone } from 'react-icons/fa'
-import styles from './Footer.module.scss'
+import { Link } from "react-router-dom";
+import { FaVk, FaPhone } from "react-icons/fa";
+import offerPdf from "../../assets/pdf/KP_Arena.pdf";
+import registrationPdf from "../../assets/pdf/SvYuL.pdf";
+import charterPdf from "../../assets/pdf/Ustav.pdf";
+import styles from "./Footer.module.scss";
 
 export default function Footer() {
-  const year = new Date().getFullYear()
+  const year = new Date().getFullYear();
+  const documents = [
+    {
+      href: registrationPdf,
+      title: "Свидетельство о регистрации",
+    },
+    {
+      href: charterPdf,
+      title: "Устав организации",
+    },
+    {
+      href: offerPdf,
+      title: "Коммерческое предложение",
+    },
+  ];
 
   return (
     <footer className={styles.footer}>
@@ -18,10 +35,33 @@ export default function Footer() {
           </div>
 
           <nav className={styles.nav}>
-            <Link to="/" className={styles.navLink}>Главная</Link>
-            <Link to="/about" className={styles.navLink}>О клубе</Link>
-            <Link to="/contacts" className={styles.navLink}>Контакты</Link>
+            <Link to="/" className={styles.navLink}>
+              Главная
+            </Link>
+            <Link to="/about" className={styles.navLink}>
+              О клубе
+            </Link>
+            <Link to="/contacts" className={styles.navLink}>
+              Контакты
+            </Link>
           </nav>
+
+          <div className={styles.documents}>
+            <p className={styles.documentsTitle}>Документы</p>
+            <div className={styles.documentsList}>
+              {documents.map((doc) => (
+                <a
+                  key={doc.title}
+                  href={doc.href}
+                  className={styles.documentLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {doc.title}
+                </a>
+              ))}
+            </div>
+          </div>
 
           <div className={styles.contacts}>
             <a href="tel:+79115715522" className={styles.phone}>
@@ -48,5 +88,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  )
+  );
 }

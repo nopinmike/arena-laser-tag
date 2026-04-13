@@ -80,6 +80,40 @@
   }
 }
 
+.documents {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.documentsTitle {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  color: $white;
+  margin: 0;
+}
+
+.documentsList {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.documentLink {
+  font-size: 14px;
+  color: $text-muted;
+  text-decoration: none;
+  transition: color $transition-base;
+  max-width: 260px;
+  line-height: 1.4;
+
+  &:hover {
+    color: $white;
+  }
+}
+
 .contacts {
   display: flex;
   flex-direction: column;
