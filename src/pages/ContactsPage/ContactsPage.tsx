@@ -1,10 +1,4 @@
-import {
-  FaPhone,
-  FaVk,
-  FaTelegramPlane,
-  FaMapMarkerAlt,
-  FaClock,
-} from "react-icons/fa";
+import { FaPhone, FaVk, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import coachPhoto from "../../assets/coach.png";
 import styles from "./ContactsPage.module.scss";
 

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { FaVk, FaPhone } from "react-icons/fa";
 import offerPdf from "../../assets/pdf/KP_Arena.pdf";
+import privacyPdf from "../../assets/pdf/Politika-konfidencialnosti.pdf";
 import registrationPdf from "../../assets/pdf/SvYuL.pdf";
 import charterPdf from "../../assets/pdf/Ustav.pdf";
 import styles from "./Footer.module.scss";
@@ -82,7 +83,12 @@ export default function Footer() {
           <span className={styles.copy}>
             &copy; РОО Спортивный клуб «АРЕНА», {year}
           </span>
-          <a href="#" className={styles.policy}>
+          <a
+            href={privacyPdf}
+            className={styles.policy}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Политика конфиденциальности
           </a>
         </div>
