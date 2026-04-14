@@ -12,6 +12,9 @@ dist
 dist-ssr
 *.local
 
+.vscode
+dist/.vscode/sftp.json
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
