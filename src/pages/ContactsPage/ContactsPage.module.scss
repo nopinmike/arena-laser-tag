@@ -42,6 +42,19 @@
   }
 }
 
+.heroLogo {
+  width: min(220px, 68vw);
+  height: auto;
+  object-fit: contain;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 4px 18px rgba(0, 0, 0, 0.3));
+
+  @media (min-width: $bp-tablet) {
+    width: min(270px, 34vw);
+    margin-bottom: 18px;
+  }
+}
+
 .heroTitle {
   font-size: clamp(32px, 5vw, 52px);
   font-weight: 900;

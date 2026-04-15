@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { FaVk, FaPhone } from "react-icons/fa";
+import clubLogo from "../../assets/Logo_PNZh__kopia.png";
 import offerPdf from "../../assets/pdf/KP_Arena.pdf";
 import privacyPdf from "../../assets/pdf/Politika-konfidencialnosti.pdf";
 import registrationPdf from "../../assets/pdf/SvYuL.pdf";
@@ -29,7 +30,11 @@ export default function Footer() {
         <div className={styles.top}>
           <div className={styles.brand}>
             <Link to="/" className={styles.logo}>
-              <span className={styles.logoMain}>АРЕНА</span>
+              <img
+                src={clubLogo}
+                alt="Логотип спортивного клуба «АРЕНА»"
+                className={styles.logoImage}
+              />
               <span className={styles.logoSub}>Спортивный клуб лазертага</span>
             </Link>
             <p className={styles.address}>г. Вельск, Архангельская область</p>

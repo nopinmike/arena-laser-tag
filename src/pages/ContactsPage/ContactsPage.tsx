@@ -1,5 +1,6 @@
 import { FaPhone, FaVk, FaMapMarkerAlt, FaClock } from "react-icons/fa";
 import coachPhoto from "../../assets/coach.png";
+import clubLogoAlt from "../../assets/Logo_PNZh__kopia.png";
 import styles from "./ContactsPage.module.scss";
 
 const CONTACT_CARDS = [
@@ -33,6 +34,11 @@ export default function ContactsPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
+          <img
+            src={clubLogoAlt}
+            alt="Логотип спортивного клуба «АРЕНА»"
+            className={styles.heroLogo}
+          />
           <h1 className={styles.heroTitle}>Контакты</h1>
           <p className={styles.heroSubtitle}>
             Свяжитесь с нами и запишитесь на пробную тренировку

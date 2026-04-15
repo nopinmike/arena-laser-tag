@@ -27,35 +27,16 @@
 .logo {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   text-decoration: none;
   z-index: 1001;
 }
 
-.logoMain {
-  font-size: 24px;
-  font-weight: 900;
-  color: $white;
-  letter-spacing: 6px;
-  line-height: 1;
-
-  @media (min-width: $bp-tablet) {
-    font-size: 28px;
-    letter-spacing: 8px;
-  }
-}
-
-.logoSub {
-  font-size: 9px;
-  color: $text-muted;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  font-weight: 500;
-  margin-top: 2px;
-
-  @media (min-width: $bp-tablet) {
-    font-size: 10px;
-    letter-spacing: 2px;
-  }
+.logoImage {
+  display: block;
+  width: 170px;
+  height: auto;
+  object-fit: contain;
 }
 
 .nav {

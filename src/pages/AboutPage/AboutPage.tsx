@@ -15,6 +15,7 @@ import {
   FaStar,
 } from 'react-icons/fa'
 import coachPhoto from '../../assets/coach.png'
+import clubLogoAlt from '../../assets/Logo_PNZh__kopia.png'
 import styles from './AboutPage.module.scss'
 
 const DEVELOPS = [
@@ -81,6 +82,11 @@ export default function AboutPage() {
       <section className={styles.hero}>
         <div className={styles.heroOverlay} />
         <div className={styles.heroContent}>
+          <img
+            src={clubLogoAlt}
+            alt="Логотип спортивного клуба «АРЕНА»"
+            className={styles.heroLogo}
+          />
           <p className={styles.heroLabel}>Школа лазерного боя</p>
           <h1 className={styles.heroTitle}>
             Спортивный клуб <span className={styles.accent}>«АРЕНА»</span>

@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import clubLogo from '../../assets/Logo_PNZh__kopia.png'
 import styles from './Header.module.scss'
 
 const NAV_ITEMS = [
@@ -37,8 +38,11 @@ export default function Header() {
     <header className={headerClass}>
       <div className={styles.container}>
         <Link to="/" className={styles.logo}>
-          <span className={styles.logoMain}>АРЕНА</span>
-          <span className={styles.logoSub}>Спортивный клуб лазертага</span>
+          <img
+            src={clubLogo}
+            alt="Логотип спортивного клуба «АРЕНА»"
+            className={styles.logoImage}
+          />
         </Link>
 
         <nav className={`${styles.nav} ${isMobileOpen ? styles.navOpen : ''}`}>

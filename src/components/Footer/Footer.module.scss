@@ -33,15 +33,16 @@
 .logo {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
   text-decoration: none;
 }
 
-.logoMain {
-  font-size: 22px;
-  font-weight: 900;
-  color: $white;
-  letter-spacing: 6px;
-  line-height: 1;
+.logoImage {
+  display: block;
+  width: clamp(130px, 16vw, 168px);
+  height: auto;
+  object-fit: contain;
 }
 
 .logoSub {
